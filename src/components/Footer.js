@@ -1,6 +1,6 @@
 import './Footer.css';
 
-export default () => {
+export default function Footer() {
   return (
     <footer>
       Feito por <strong>João Oliveira</strong> <span role="img" aria-label="livros">📚</span><br />

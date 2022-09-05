@@ -1,6 +1,6 @@
 import './Header.css';
 
-export default ({ black, hiddenh }) => {
+export default function Header({ black, hiddenh }) {
   return (
     <header className={hiddenh ? 'hiddenheader' : '' + black ? 'black' : ''}>
       <div className='header-logo'>

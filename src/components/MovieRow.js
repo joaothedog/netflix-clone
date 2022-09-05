@@ -3,7 +3,7 @@ import { useState } from 'react';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
-export default ({ title, items }) => {
+export default function MovieRow({ title, items }) {
   const [scrollX, setScrollX] = useState(-400);
 
   const handleLeftArrow = () => {
@@ -28,11 +28,11 @@ export default ({ title, items }) => {
     <div className='movieRow'>
       <h2>{title}</h2>
 
-      <div className="movieRow-left" onClick={handleLeftArrow}>
+      <div role="presentation" className="movieRow-left" onClick={handleLeftArrow} onKeyDown={handleLeftArrow}>
         <NavigateBeforeIcon style={{ fontsize: 50 }} />
       </div>
 
-      <div className="movieRow-right" onClick={handleRightArrow}>
+      <div role="presentation" className="movieRow-right" onClick={handleRightArrow} onKeyDown={handleRightArrow}>
         <NavigateNextIcon style={{ fontsize: 50 }} />
       </div>
 

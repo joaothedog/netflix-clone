@@ -33,5 +33,19 @@ module.exports = {
     "react/self-closing-comp": "warn",
     'import/named': 'off',
     'no-unused-vars': 'off',
+    'jsx-a11y/no-static-element-interactions': [
+      'error',
+      {
+        handlers: [
+          'onClick',
+          'onMouseDown',
+          'onMouseUp',
+          'onKeyPress',
+          'onKeyDown',
+          'onKeyUp',
+        ],
+        allowExpressionValues: true,
+      },
+    ],
   },
 };
