@@ -85,3 +85,31 @@
   color: #999;
 }
 
+@media(max-width:760px){
+  .highlighted{
+    height: 80vh;
+  }
+
+  .highlighted-name{
+    font-size: 40px;
+  }
+
+  .highlighted-info{
+    font-size: 16px;
+  }
+
+  .highlighted-description{
+    font-size: 14px;
+    margin-right: 30px;
+    max-width: 100%;
+  }
+
+  .highlighted-watch-btn,
+  .highlighted-addmylist-btn{
+    font-size: 16px;
+  }
+
+  .highlighted-genres{
+    font-size: 14px;
+  }
+}
