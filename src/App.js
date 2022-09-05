@@ -11,6 +11,7 @@ function App() {
   const [movieList, setMovieList] = useState([]);
   const [highlightedData, setHighlightedData] = useState(null);
   const [blackHeader, setBlackHeader] = useState(false);
+  const [hiddenHeader, setHiddenHeader] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -45,9 +46,25 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    const scrollListenerHidden = () => {
+      if (window.scrollY > 500) {
+        setHiddenHeader(true)
+      } else {
+        setHiddenHeader(false);
+      }
+    }
+
+    window.addEventListener('scroll', scrollListenerHidden);
+
+    return () => {
+      window.removeEventListener('scroll', scrollListenerHidden);
+    }
+  }, []);
+
   return (
     <div className="page">
-      <Header black={blackHeader} />
+      <Header black={blackHeader} hiddenh={hiddenHeader} />
 
       {highlightedData &&
         <HighlightedMovie item={highlightedData} />
