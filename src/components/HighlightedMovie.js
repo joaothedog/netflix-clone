@@ -7,6 +7,13 @@ export default ({ item }) => {
     genres.push(item.genres[i].name);
   }
 
+  console.log(item.overview.length)
+  let overview = [];
+  for (let i of item.overview) {
+    overview.push(item.overview[i]);
+  }
+
+
   return (
     <section className="highlighted" style={{
       backgroundSize: 'cover',
@@ -21,7 +28,7 @@ export default ({ item }) => {
             <div className='highlighted-year'>{firstDate.getFullYear()}</div>
             <div className='highlighted-seasons'>{item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's' : ''} disponí{item.number_of_seasons !== 1 ? 'veis' : 'vel'}</div>
           </div>
-          <div className='highlighted-description'>{item.overview}</div>
+          <div className='highlighted-description'>{overview.length <= 150 ? item.overview : `${item.overview.slice(0, 200)}...`}</div>
           <div className='highlighted-btns'>
             <a href={`/watch/${item.id}`} className='highlighted-watch-btn'>▶ Assistir</a>
             <a href={`/list/add/${item.id}`} className='highlighted-addmylist-btn'>+ Minha lista</a>
