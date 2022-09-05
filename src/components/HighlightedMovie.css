@@ -1,0 +1,87 @@
+.highlighted {
+  height: 90vh;
+}
+
+.highlighted-vertical-fade{
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.highlighted-horizontal-fade{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111 20%, transparent 80%);
+}
+
+.highlighted-name {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.highlighted-info {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.highlighted-points,
+.highlighted-year,
+.highlighted-seasons {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.highlighted-points {
+  color: #46d369;
+}
+
+.highlighted-description{
+  margin-top: 15px;
+  font-size: 20px;
+  color: #999;
+  width: 45%;
+}
+
+.highlighted-btns {
+  margin-top: 15px;
+}
+
+.highlighted-watch-btn,
+.highlighted-addmylist-btn{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 10px;
+  opacity: 1;
+  transition: all ease 0.2s;
+}
+
+.highlighted-watch-btn:hover,
+.highlighted-addmylist-btn:hover{
+  opacity: 0.7;
+}
+
+.highlighted-watch-btn {
+  background-color: white;
+  color: black;
+}
+
+.highlighted-addmylist-btn {
+  background-color: #333;
+  color: white;
+}
+
+.highlighted-genres{
+  font-size: 18px;
+  margin-top: 15px;
+  color: #999;
+}
+
