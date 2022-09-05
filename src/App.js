@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import MovieRow from './components/MovieRow';
 import HighlightedMovie from './components/HighlightedMovie';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -57,6 +58,8 @@ function App() {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      <Footer />
     </div>
   );
 }
